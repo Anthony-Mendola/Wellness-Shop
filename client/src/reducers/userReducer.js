@@ -1,10 +1,18 @@
-import { combineReducers } from "redux";
-import itemReducer from "./itemReducer";
-import userReducer from "./userReducer";
+export default function authReducer(state = [], action) {
+  switch (action.type) {
+    case "LOGIN_USER":
+      return action.payload;
 
-const rootReducer = combineReducers({
-  currentItem: itemReducer,
-  user: userReducer
-});
+    case "LOGOUT_USER":
+      return action.payload;
 
-export default rootReducer;
+    case "UPDATE_CART":
+      return {
+        ...state,
+        cart: action.payload
+      };
+
+    default:
+      return state;
+  }
+}
