@@ -7,11 +7,11 @@ class CartsController < ApplicationController
 
   def update
     @cart = Cart.find(params[:id])
-    @cart.products.each do |product|
-      product.sold_out = true
-      product.save
+    @cart.items.each do |item|
+      item.sold_out = true
+      item.save
     end
-    @cart.products.clear
+    @cart.items.clear
     render json: @cart, status: 201
   end
 

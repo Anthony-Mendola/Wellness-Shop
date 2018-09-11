@@ -1,12 +1,12 @@
 class ItemsController < ApplicationController
 
   def index
-    @products = Product.all.where(sold_out: false)
-    render json: @products, each_serializer: ProductBasicsSerializer
+    @items = Item.all.where(sold_out: false)
+    render json: @itemss, each_serializer: ItemSpecSerializer
   end
 
   def show
-    @product = Product.find(params[:id])
-    render json: @product
+    @item = Item.find(params[:id])
+    render json: @item
   end
 end
