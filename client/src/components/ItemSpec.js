@@ -1,4 +1,5 @@
 import React from "react";
+import DeleteFromCart from "../components/DeleteFromCart";
 
 const ItemSpec = ({ id, name, thumbnail, price, page }) => {
   return (
@@ -10,6 +11,7 @@ const ItemSpec = ({ id, name, thumbnail, price, page }) => {
           <em>${price}</em>
         </div>
       </a>
+      {page === "cart" && <DeleteFromCart itemId={id} />}
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Menu, Segment, Icon } from "semantic-ui-react";
+import Logo from "./Logo";
 
 class SignedIn extends Component {
   state = {
@@ -54,4 +55,4 @@ class SignedIn extends Component {
   }
 }
 
-export default { SignedIn };
+export default SignedIn;
