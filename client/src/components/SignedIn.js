@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Menu, Segment, Icon } from "semantic-ui-react";
-import Logo from "./Logo";
+import { Link } from "react-router-dom";
 
 class SignedIn extends Component {
   state = {
@@ -23,7 +23,7 @@ class SignedIn extends Component {
       <Segment inverted>
         <Menu inverted pointing secondary>
           <Menu.Item
-            //   as={Link}
+            as={Link}
             to="/items"
             name="home"
             active={activeItem === "home"}
@@ -32,7 +32,7 @@ class SignedIn extends Component {
           />
           <Menu.Menu position="right">
             <Menu.Item
-              //   as={Link}
+              as={Link}
               to="/cart"
               name="cart"
               active={activeItem === "cart"}
