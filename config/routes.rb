@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  
+
   resources :carts
   resources :users
-  resources :products
+  resources :items
   scope '/api' do
-    get :products, to: 'products#index'
+    get :items, to: 'items#index'
   end
 
 

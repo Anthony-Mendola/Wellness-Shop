@@ -4,6 +4,10 @@ import { Header, Divider } from "semantic-ui-react";
 import ItemsList from "../components/ItemsList";
 
 class ItemsPage extends Component {
+  componentDidMount() {
+    this.props.actions.fetchItems();
+  }
+
   render() {
     return (
       <div>

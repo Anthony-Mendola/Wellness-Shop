@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, Sticky } from "semantic-ui-react";
 import Logo from "./Logo";
 
-class LoggedOutMenu extends Component {
+class SignedOut extends Component {
   state = {
     activeItem: "home"
   };
@@ -45,4 +45,4 @@ class LoggedOutMenu extends Component {
   }
 }
 
-export default LoggedOutMenu;
+export default SignedOut;
