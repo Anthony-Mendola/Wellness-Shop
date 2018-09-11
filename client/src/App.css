@@ -2,27 +2,94 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.item-link {
+  color: #202328;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+.item-link:hover {
+  color: #2759c4;
+}
+
+.item-div {
+  display: inline-block;
+  vertical-align: top;
+  margin: 15px;
+  text-align: left;
+}
+
+.thumbnail-img {
+  max-width: 300px;
+  margin-bottom: 0px;
+}
+
+.thumbnail-img:hover {
+  box-shadow: 0px 0px 5px grey;
+}
+
+.item-div h4 {
+  max-width: 250px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.form-container {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-form-container {
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  text-align: left;
+}
+
+.city-input {
+  min-width: 280px;
+  padding-bottom: 15px;
+}
+
+.state-input {
+  width: 85px;
+}
+
+.zip-input {
+  width: 85px;
+}
+
+.page-container {
+  color: gray;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cart-left {
+  width: 67%;
+  float: left;
+  text-align: left;
   padding: 20px;
-  color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.cart-right {
+  width: 33%;
+  float: right;
+  text-align: left;
+  padding: 20px;
+  color: rgb(17, 32, 168);
+  background-color: #7eb47e;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px grey;
 }
 
-.App-intro {
-  font-size: large;
+.cart-right em {
+  float: right;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.cart-divider {
+  background-color: white;
 }
