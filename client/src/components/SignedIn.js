@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Menu, Segment, Icon } from "semantic-ui-react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as actions from "../actions/userActions";
 import { Link } from "react-router-dom";
 
 class SignedIn extends Component {
@@ -55,4 +58,18 @@ class SignedIn extends Component {
   }
 }
 
-export default SignedIn;
+function mapStateToProps(state) {
+  return {
+    user: state.user,
+    itemCount: state.user.cart.items.length
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return { actions: bindActionCreators(actions, dispatch) };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SignedIn);
