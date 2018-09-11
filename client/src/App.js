@@ -25,11 +25,15 @@ class App extends Component {
           <Route exact path="/" component={ItemsPage} />
           <Route exact path="/items" component={ItemsPage} />
           <Route path={"/items/:itemId"} component={ItemShow} />
-          <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
-          <Route exact path="/NewAccount" component={NewAccount} />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/cart" component={Cart} />
+          {this.props.token && (
+            <Route exact path="/account" component={NewAccount} />
+          )}
+          {this.props.token && <Route exact path="/login" component={Login} />}
+          {this.props.token && (
+            <Route exact path="/signup" component={Signup} />
+          )}
+          {this.props.token && <Route exact path="/cart" component={Cart} />}
         </div>
       </Router>
     );
@@ -37,7 +41,7 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  return { items: state.items };
+  return { token: state.user.token };
 }
 
 function mapDispatchToProps(dispatch) {
