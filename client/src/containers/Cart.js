@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actions from "../actions/itemActions";
-
 import { Header, Container, Divider } from "semantic-ui-react";
 import ItemsList from "../components/ItemsList";
 import CheckoutCart from "../components/CheckoutCart";

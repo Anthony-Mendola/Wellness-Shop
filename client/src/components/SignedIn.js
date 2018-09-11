@@ -60,8 +60,8 @@ class SignedIn extends Component {
 
 function mapStateToProps(state) {
   return {
-    user: state.user,
-    itemCount: state.user.cart.items.length
+    user: state.user
+    //  itemCount: state.user.cart.items.length
   };
 }
 
