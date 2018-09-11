@@ -8,6 +8,7 @@ import Login from "./components/Login";
 import SignedIn from "./components/SignedIn";
 import SignedOut from "./components/SignedOut";
 import ItemsPage from "./containers/ItemsPage";
+import ItemShow from "./components/ItemShow";
 import { Divider } from "semantic-ui-react";
 import "./App.css";
 
@@ -20,6 +21,7 @@ class App extends Component {
           <SignedOut />
           <Divider hidden />
           <Route exact path="/" component={ItemsPage} />
+          <Route path={"/items/:itemId"} component={ItemShow} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/NewAccount" component={NewAccount} />
