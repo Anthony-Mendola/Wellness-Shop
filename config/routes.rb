@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :carts
-  resources :users
-  resources :items
   scope '/api' do
     get :items, to: 'items#index'
+    get 'items/:id' => 'items#show'
+    post 'users' => 'users#create'
+    post 'users/:id' => 'users#update'
+    post 'sessions' => 'sessions#create'
+    post 'cart_items' => 'cart_items#create'
+    post 'cart_items/:cart_id/:item_id' => 'cart_items#destroy'
+    post 'carts/:id' => 'carts#update'
   end
 
 
