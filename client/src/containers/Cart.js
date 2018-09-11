@@ -48,8 +48,8 @@ class Cart extends Component {
 function mapStateToProps(state) {
   return {
     user: state.user,
-    total: state.user.cart.products
-      .map(product => product.price)
+    total: state.user.cart.items
+      .map(item => item.price)
       .reduce((a, b) => a + b, 0)
   };
 }

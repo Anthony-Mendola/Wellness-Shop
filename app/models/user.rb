@@ -15,4 +15,8 @@ class User < ApplicationRecord
     user.build_cart
     user
   end
+  def downcase_email
+    self.email.downcase!
+  end
+  
 end
