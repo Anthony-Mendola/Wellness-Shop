@@ -5,3 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Item.create([
+  {
+    name: 'Turmeric Spices',
+    img_full: 'https://images.pexels.com/photos/672046/pexels-photo-672046.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    img_thumbnail: 'https://images.pexels.com/photos/672046/pexels-photo-672046.jpeg?auto=compress&cs=tinysrgb&h=350',
+    description: "Extremely fresh!",
+    price: 20
+  },
+
+  {
+    name: 'Hand Wash',
+    img_full: 'https://i.imgur.com/wsIYWia.jpg',
+    img_thumbnail: 'https://i.imgur.com/wsIYWia_d.jpg?maxwidth=520&shape=thumb&fidelity=high',
+    description: "Organic hand wash",
+    price: 8
+  },
+
+  {
+    name: 'Aloe Lotion',
+    img_full: 'https://i.imgur.com/4c5LDoK.jpg',
+    img_thumbnail: 'https://i.imgur.com/4c5LDoK_d.jpg?maxwidth=520&shape=thumb&fidelity=high',
+    description: "Great for the skin!",
+    price: 10
+  }
+])
+
