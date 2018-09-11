@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as actions from "./actions/productActions";
+import * as actions from "./actions/itemActions";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Signup from "./components/Signup";
 import NewAccount from "./components/NewAccount";
@@ -36,7 +36,7 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  return { products: state.products };
+  return { items: state.items };
 }
 
 function mapDispatchToProps(dispatch) {
