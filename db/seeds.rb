@@ -35,3 +35,4 @@ Item.create([
   }
 ])
 
+user.cart.products << [Product.find(1), Product.find(4)]

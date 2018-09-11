@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all.where(sold_out: false)
-    render json: @itemss, each_serializer: ItemSpecSerializer
+    render json: @items 
   end
 
   def show

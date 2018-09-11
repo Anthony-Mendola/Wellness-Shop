@@ -19,10 +19,11 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <SignedIn />
-          <SignedOut />
+          {this.props.token && <SignedIn />}
+          {!this.props.token && <SignedOut />}
           <Divider hidden />
           <Route exact path="/" component={ItemsPage} />
+          <Route exact path="/items" component={ItemsPage} />
           <Route path={"/items/:itemId"} component={ItemShow} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
