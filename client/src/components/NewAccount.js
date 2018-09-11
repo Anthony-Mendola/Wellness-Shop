@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { bindActionCreators } from "redux";
 import { Form, Button } from "semantic-ui-react";
-import StatesList from "./StatesList";
+import UnitedStates from "./UnitedStates";
 
 class NewAccount extends Component {
   constructor(props) {
@@ -106,7 +105,7 @@ class NewAccount extends Component {
                 value={this.state.state_initials}
                 onChange={this.handleChange}
               />
-              <StatesList />
+              <UnitedStates />
             </Form.Field>
             <Form.Field className="zip-input">
               <label>Zip Code</label>

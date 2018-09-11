@@ -9,7 +9,7 @@ class Signup extends Component {
           Create a New Account
           <Divider hidden />
         </Header>
-        <AccountForm formType={"createUser"} />
+        <NewAccount formType={"createUser"} />
         <Divider horizontal section>
           OR
         </Divider>
