@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as actions from "../actions/productActions";
+import * as actions from "../actions/itemActions";
 import AddToCart from "../components/AddToCart";
 
 class ItemShow extends Component {
@@ -27,10 +27,32 @@ class ItemShow extends Component {
       </div>
     );
   }
+
+  componentWillUnmount() {
+    this.props.actions.cleanupItem();
+  }
+}
+
+function mapStateToProps(state, ownProps) {
+  if (state.user.hasOwnProperty("cart")) {
+    return {
+      cartId: state.user.cart.id,
+      itemId: ownProps.match.params.itemId,
+      item: state.currentItem
+    };
+  } else {
+    return {
+      itemId: ownProps.match.params.itemId,
+      item: state.currentItem
+    };
+  }
 }
 
 function mapDispatchToProps(dispatch) {
   return { actions: bindActionCreators(actions, dispatch) };
 }
 
-export default connect(mapDispatchToProps)(ItemShow);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ItemShow);

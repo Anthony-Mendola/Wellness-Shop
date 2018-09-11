@@ -11,3 +11,27 @@ export function fetchItems() {
       );
   };
 }
+
+export function fetchItem(props) {
+  return dispatch => {
+    dispatch({ type: "LOADING_ITEM" });
+    return fetch(`/api/items/${props.itemId}`)
+      .then(resp => resp.json())
+      .then(item =>
+        dispatch({
+          type: "FETCH_ITEM",
+          payload: item
+        })
+      );
+  };
+}
+
+export function cleanupItem() {
+  return dispatch => {
+    const item = {};
+    dispatch({
+      type: "CLEANUP_ITEM",
+      payload: item
+    });
+  };
+}
