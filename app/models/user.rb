@@ -8,6 +8,11 @@ class User < ApplicationRecord
   validates :state_initials, length: { maximum: 2 }
   validates :zip, length: { is: 5 }
 
+  before_create :create_token
+
+  def create_token
+    self.token = SecureRandom.uuid + 'am111' + self.email[0,4]
+  end
 
 #users are initialized with a cart
   def self.new_with_cart(params)
@@ -18,5 +23,5 @@ class User < ApplicationRecord
   def downcase_email
     self.email.downcase!
   end
-  
+
 end
