@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as actions from "../actions/productActions";
 import AddToCart from "../components/AddToCart";
 
 class ItemShow extends Component {
@@ -26,4 +29,8 @@ class ItemShow extends Component {
   }
 }
 
-export default ItemShow;
+function mapDispatchToProps(dispatch) {
+  return { actions: bindActionCreators(actions, dispatch) };
+}
+
+export default connect(mapDispatchToProps)(ItemShow);

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as actions from "./actions/productActions";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import SignedIn from "./components/SignedIn";
 import Signup from "./components/Signup";
 import NewAccount from "./components/NewAccount";
 import Cart from "./containers/Cart";
@@ -33,4 +35,15 @@ class App extends Component {
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return { products: state.products };
+}
+
+function mapDispatchToProps(dispatch) {
+  return { actions: bindActionCreators(actions, dispatch) };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);

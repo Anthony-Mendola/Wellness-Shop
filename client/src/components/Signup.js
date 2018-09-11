@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Header, Container, Button, Divider } from "semantic-ui-react";
+import NewAccount from "./NewAccount";
 
 class Signup extends Component {
   render() {
