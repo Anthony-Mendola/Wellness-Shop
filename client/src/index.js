@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import thunk from "redux-thunk";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+import autoMergeLevel2 from "redux-persist/lib/stateReconciler/autoMergeLevel2";
 import "./index.css";
 import App from "./App";
 import "semantic-ui-css/semantic.css";
@@ -8,7 +11,16 @@ import rootReducer from "./reducers/rootReducer";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const persistConfig = {
+  key: "root",
+  storage: storage,
+  stateReconciler: autoMergeLevel2
+};
+
+const pReducer = persistReducer(persistConfig, rootReducer);
+
+const store = createStore(pReducer, applyMiddleware(thunk));
+export const persistor = persistStore(store);
 
 ReactDOM.render(
   <Provider store={store}>
