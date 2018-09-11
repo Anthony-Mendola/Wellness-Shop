@@ -1,3 +1,3 @@
 class ItemSpecSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :img_thumbnail, :price, :sold_out
 end
