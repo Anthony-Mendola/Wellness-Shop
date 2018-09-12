@@ -12,12 +12,13 @@ class ItemsPage extends Component {
 
   render() {
     return (
-      <div>
-        <Header as="h2" textAlign="center">
+
+      <div className="ui raise very padded fluid container segment">
+        <Header as="h1" color="teal" textAlign="center">
           Wellness Shop Items
-          <Divider hidden />
         </Header>
         <ItemsList page={"index"} items={this.props.items} />
+
       </div>
     );
   }

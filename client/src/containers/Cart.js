@@ -12,7 +12,7 @@ class Cart extends Component {
     return (
       <div>
         <Container>
-          <Header as="h2" textAlign="center">
+          <Header color="teal" as="h1" textAlign="center">
             Your Cart
             <Divider hidden />
           </Header>

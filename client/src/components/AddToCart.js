@@ -26,7 +26,7 @@ class AddToCart extends Component {
         <Form id="add-to-cart" onSubmit={this.handleSubmit}>
           <input name="cart_id" type="hidden" value={this.props.cartId} />
           <input name="item_id" type="hidden" value={this.props.itemId} />
-          <Button primary type="submit" disabled={this.state.buttonDisabled}>
+          <Button className="ui inverted green button" type="submit" disabled={this.state.buttonDisabled}>
             Add to Cart
           </Button>
         </Form>
