@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Menu, Segment, Icon } from "semantic-ui-react";
+import { Menu, Segment, Icon, Button } from "semantic-ui-react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actions from "../actions/userActions";
@@ -24,8 +24,8 @@ class SignedIn extends Component {
   render() {
     const { activeItem } = this.state;
     return (
-      <Segment inverted>
-        <Menu inverted pointing secondary>
+      <Segment color red inverted>
+        <Menu color red inverted pointing secondary>
           <Logo />
           <Menu.Item
             as={Link}
@@ -34,7 +34,7 @@ class SignedIn extends Component {
             active={activeItem === "home"}
             onClick={this.handleMenuClick}
           >
-      </Menu.Item>
+          </Menu.Item>
 
           <Menu.Item
             as={Link}

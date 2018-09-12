@@ -1,24 +1,14 @@
-# README
+# Wellness Shop
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Usage
 
-Things you may want to cover:
+To use this application, clone the repository and
 
-* Ruby version
+(1) run `npm --prefix ./client/ install ./client/`
+> To install all dependencies for the React/Redux frontend application. Alternatively, cd into client folder and run npm install.
 
-* System dependencies
+(2) run `rails db:migrate db:seed`
+> Creates the schema and seeds the API database with shop items.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+(3) run `rake start`
+> Boots the client application and API server via Foreman.
