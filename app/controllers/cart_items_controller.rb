@@ -1,13 +1,13 @@
 class CartItemsController < ApplicationController
 
   def create
-    @cart_item = Cartitem.create(cart_item_params)
+    @cart_item = CartItem.create(cart_item_params)
     @cart = Cart.find(@cart_item.cart_id)
     render json: @cart
   end
 
   def destroy
-    @item = Cartitem.find_by(cart_item_params)
+    @item = CartItem.find_by(cart_item_params)
     @item.destroy
     @cart = Cart.find(params[:cart_id])
     render json: @cart
