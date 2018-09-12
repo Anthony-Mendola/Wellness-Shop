@@ -76,13 +76,13 @@ export function addToCart() {
   };
 }
 
-export function removeFromCart(props) {
+export function deleteFromCart(props) {
   return dispatch => {
-    dispatch({ type: "REMOVING_ITEM" });
+    dispatch({ type: "DELETE_ITEM" });
     return fetch(`/api/cart_items/${props.cartId}/${props.itemId}`, {
       method: "POST",
       body: new FormData(
-        document.getElementById(`remove-from-cart-${props.itemID}`)
+        document.getElementById(`delete-from-cart-${props.itemID}`)
       ),
       credentials: "same-origin"
     })
@@ -112,7 +112,7 @@ export function checkoutCart(props) {
         })
       )
       .then(
-        setTimeout(function() {
+        setTimeout(function () {
           window.location.href = "/confirmation";
         }, 500)
       );
