@@ -12,14 +12,18 @@ class ItemsPage extends Component {
 
   render() {
     return (
-
-      <div className="ui raise very padded fluid container segment">
+      <div>
+        <div className="ui raise very padded fluid container segment">
+          <Header as="h1" color="green" textAlign="center">
+            Welcome to Anthony's Wellness Shop!
+        </Header>
+        </div>
         <Header as="h1" color="teal" textAlign="center">
-          Wellness Shop Items
+          Items in stock
         </Header>
         <ItemsList page={"index"} items={this.props.items} />
-
       </div>
+
     );
   }
 }

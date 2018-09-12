@@ -3,7 +3,7 @@ import { Header, Container, Divider } from "semantic-ui-react";
 
 const OrderConfirmation = () => (
   <Container>
-    <Header color="teal" as="h1" textAlign="center">
+    <Header className="ui very padded raised container segment" color="teal" as="h1" textAlign="center">
       Thank you for your order!
       <Divider hidden />
       <h3>Your item(s) will be shipped within 1 business days.</h3>
