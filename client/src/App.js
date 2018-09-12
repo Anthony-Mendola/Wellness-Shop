@@ -14,6 +14,7 @@ import ItemShow from "./components/ItemShow";
 import { Divider } from "semantic-ui-react";
 import "./App.css";
 import OrderConfirmation from "./components/OrderConfirmation";
+import AboutPage from "./components/AboutPage";
 
 class App extends Component {
   render() {
@@ -28,6 +29,7 @@ class App extends Component {
           <Route path={"/items/:itemId"} component={ItemShow} />
           <Route path={"/confirmation"} component={OrderConfirmation} />
           {this.props.token && <Route exact path="/account" component={AccountPage} />}
+          {this.props.token && <Route exact path="/about" component={AboutPage} />}
           {!this.props.token && <Route exact path="/login" component={Login} />}
           {!this.props.token && <Route exact path="/signup" component={Signup} />}
           {this.props.token && <Route exact path="/cart" component={Cart} />}

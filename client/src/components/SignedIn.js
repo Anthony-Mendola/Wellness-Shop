@@ -24,8 +24,8 @@ class SignedIn extends Component {
   render() {
     const { activeItem } = this.state;
     return (
-      <Segment color red inverted>
-        <Menu color red inverted pointing secondary>
+      <Segment inverted>
+        <Menu inverted pointing secondary>
           <Logo />
           <Menu.Item
             as={Link}
@@ -41,6 +41,15 @@ class SignedIn extends Component {
             to="/account"
             name="account"
             active={activeItem === "account"}
+            onClick={this.handleMenuClick}
+          >
+          </Menu.Item>
+
+          <Menu.Item
+            as={Link}
+            to="/about"
+            name="about"
+            active={activeItem === "about"}
             onClick={this.handleMenuClick}
           >
           </Menu.Item>
