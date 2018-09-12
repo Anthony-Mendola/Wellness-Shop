@@ -3,7 +3,7 @@ import React from "react";
 const Logo = () => (
   <div>
     <img
-      class="ui small image"
+      className="ui small image"
       src="http://wellnesswithanthony.com/assets/img/icons/logo.png"
     />
   </div>

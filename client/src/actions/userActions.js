@@ -31,6 +31,7 @@ export function loginUser() {
   };
 }
 
+//Log in error is being printed to console, debug
 function loginOptions(resp, dispatch) {
   if (resp.status === 201) {
     const user = resp
