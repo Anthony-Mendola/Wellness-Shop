@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
@@ -9,7 +10,6 @@ import App from "./App";
 import "semantic-ui-css/semantic.css";
 import rootReducer from "./reducers/rootReducer";
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
 
 const persistConfig = {
   key: "root",

@@ -82,7 +82,7 @@ class NewAccount extends Component {
               name="address"
               type="text"
               placeholder="111 Enlightened Way"
-              value={this.state.address}
+              // value={this.state.address}
               onChange={this.handleChange}
             />
           </Form.Field>
@@ -103,7 +103,7 @@ class NewAccount extends Component {
                 name="state_initials"
                 className="ui fluid dropdown"
                 list="states"
-                placeholder="IN"
+                placeholder="NY"
                 maxLength="2"
                 value={this.state.state_initials}
                 onChange={this.handleChange}

@@ -34,7 +34,7 @@ class SignedIn extends Component {
             active={activeItem === "home"}
             onClick={this.handleMenuClick}
           />
-
+      </Menu.Item>
 
           <Menu.Item
             as={Link}
@@ -43,6 +43,7 @@ class SignedIn extends Component {
             active={activeItem === "account"}
             onClick={this.handleMenuClick}
           />
+          </Menu.Item>
 
           <Menu.Menu position="right">
             <Menu.Item

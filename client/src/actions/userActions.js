@@ -34,7 +34,7 @@ export function loginUser() {
 //Log in error is being printed to console, debug
 function loginOptions(resp, dispatch) {
   if (resp.status === 201) {
-    const user = resp
+    resp
       .json()
       .then(user =>
         dispatch({
@@ -112,7 +112,7 @@ export function checkoutCart(props) {
         })
       )
       .then(
-        setTimeout(function () {
+        setTimeout(function() {
           window.location.href = "/confirmation";
         }, 500)
       );

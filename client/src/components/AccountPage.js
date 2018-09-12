@@ -5,7 +5,7 @@ import NewAccount from "./NewAccount";
 const Signup = () => (
   <Container>
     <Header as="h2" textAlign="center">
-      Update Account Details
+      Update Your Account Details
       <Divider hidden />
     </Header>
     <NewAccount formType={"updateUser"} />
