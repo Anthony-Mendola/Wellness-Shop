@@ -25,7 +25,3 @@ to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of
 The application is available as open source under the terms of the
 [MIT License]
 
-## Code of Conduct
-
-Everyone interacting in the MyTravels project’s codebases, issue trackers, chat rooms and mailing lists is expected
-to follow the [code of conduct]
