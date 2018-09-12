@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as actions from '../actions/userActions'
 import { Form, Button } from "semantic-ui-react";
 
 class AddToCart extends Component {
@@ -33,4 +36,12 @@ class AddToCart extends Component {
   }
 }
 
-export default AddToCart;
+function mapStateToProps(state) {
+  return { itemIds: state.user.cart.items.map(item => item.id) }
+}
+
+function mapDispatchToProps(dispatch) {
+  return { actions: bindActionCreators(actions, dispatch) }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddToCart)
