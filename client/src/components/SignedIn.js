@@ -33,7 +33,7 @@ class SignedIn extends Component {
             name="home"
             active={activeItem === "home"}
             onClick={this.handleMenuClick}
-          />
+          >
       </Menu.Item>
 
           <Menu.Item
@@ -42,7 +42,7 @@ class SignedIn extends Component {
             name="account"
             active={activeItem === "account"}
             onClick={this.handleMenuClick}
-          />
+          >
           </Menu.Item>
 
           <Menu.Menu position="right">
@@ -56,6 +56,7 @@ class SignedIn extends Component {
               <Icon name="shopping cart" />
               Cart ({this.props.itemCount})
             </Menu.Item>
+
             <Menu.Item
               name="log-out"
               active={activeItem === "log-out"}

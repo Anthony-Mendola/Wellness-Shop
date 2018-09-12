@@ -82,7 +82,7 @@ class NewAccount extends Component {
               name="address"
               type="text"
               placeholder="111 Enlightened Way"
-              // value={this.state.address}
+              value={this.state.address}
               onChange={this.handleChange}
             />
           </Form.Field>

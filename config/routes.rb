@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   scope '/api' do
-    get 'items', to: 'items#index'
+    get 'items' => 'items#index'
     get 'items/:id' => 'items#show'
     post 'users' => 'users#create'
     post 'users/:id' => 'users#update'
