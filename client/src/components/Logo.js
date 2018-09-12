@@ -1,11 +1,12 @@
 import React from "react";
 
+
 const Logo = () => (
   <div>
-    <img
-      className="ui small image"
-      src="http://wellnesswithanthony.com/assets/img/icons/logo.png"
-    />
+    <a className="ui small image" href="/items">
+      <img src="http://wellnesswithanthony.com/assets/img/icons/logo.png"
+      />
+    </a>
   </div>
 );
 

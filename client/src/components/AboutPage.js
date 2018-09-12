@@ -6,7 +6,7 @@ const AboutPage = props => (
 
   <div className="ui container">
     <h2>About</h2>
-    <div className="ui raise very padded container segment">
+    <div className="ui raise padded container segment">
       <h4>Wellness Shop is a full stack application designed to look similar to amazon.com but for health products. The application utilizes React  & Redux for frontend with a Rails API for backend. The app is styled using Semantic UI with custom CSS.</h4>
     </div>
     <h4>Designed & Developed by Anthony Mendola</h4>
