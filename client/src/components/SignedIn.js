@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actions from "../actions/userActions";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 class SignedIn extends Component {
   state = {
@@ -25,6 +26,7 @@ class SignedIn extends Component {
     return (
       <Segment inverted>
         <Menu inverted pointing secondary>
+          <Logo />
           <Menu.Item
             as={Link}
             to="/items"
@@ -32,7 +34,16 @@ class SignedIn extends Component {
             active={activeItem === "home"}
             onClick={this.handleMenuClick}
           />
+
+
+          <Menu.Item
+            as={Link}
+            to="/account"
+            name="account"
+            active={activeItem === "account"}
+            onClick={this.handleMenuClick}
           />
+
           <Menu.Menu position="right">
             <Menu.Item
               as={Link}
