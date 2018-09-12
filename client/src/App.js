@@ -20,21 +20,17 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          {this.props.token && <SignedIn />}
-          {!this.props.token && <SignedOut />}
+          { this.props.token && <SignedIn /> }
+          { !this.props.token && <SignedOut /> }
           <Divider hidden />
           <Route exact path="/" component={ItemsPage} />
           <Route exact path="/items" component={ItemsPage} />
           <Route path={"/items/:itemId"} component={ItemShow} />
           <Route path={"/confirmation"} component={OrderConfirmation} />
-          {this.props.token && (
-            <Route exact path="/account" component={NewAccount} />
-          )}
-          {!this.props.token && <Route exact path="/login" component={Login} />}
-          {!this.props.token && (
-            <Route exact path="/signup" component={Signup} />
-          )}
-          {this.props.token && <Route exact path="/cart" component={Cart} />}
+          { this.props.token && <Route exact path="/account" component={NewAccount} /> }
+          { !this.props.token && <Route exact path="/login" component={Login} /> }
+          { !this.props.token && <Route exact path="/signup" component={Signup} /> }
+          { this.props.token && <Route exact path="/cart" component={Cart} /> }
         </div>
       </Router>
     );
@@ -49,7 +45,4 @@ function mapDispatchToProps(dispatch) {
   return { actions: bindActionCreators(actions, dispatch) };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default connect(mapStateToProps,mapDispatchToProps)(App);
