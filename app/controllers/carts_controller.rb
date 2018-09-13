@@ -8,7 +8,7 @@ class CartsController < ApplicationController
   def update
     @cart = Cart.find(params[:id])
     @cart.items.each do |item|
-      item.sold_out = true
+      item.sold_out = true #item becomes sold out after checkout
       item.save
     end
     @cart.items.clear

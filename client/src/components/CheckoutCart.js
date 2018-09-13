@@ -26,6 +26,7 @@ class CheckoutCart extends Component {
   }
 }
 
+//If there are no items in the cart, confirm order button is disabled
 function mapStateToProps(state) {
   if (state.user.cart.items.length > 0) {
     return {

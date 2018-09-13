@@ -44,6 +44,7 @@ class Cart extends Component {
   }
 }
 
+//reduce method to add up amounts in cart. (total, amount) => total + amount
 function mapStateToProps(state) {
   return {
     user: state.user,

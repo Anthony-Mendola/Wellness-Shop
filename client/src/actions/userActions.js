@@ -31,7 +31,6 @@ export function loginUser() {
   };
 }
 
-
 function loginOptions(resp, dispatch) {
   if (resp.status === 201) {
     resp
@@ -112,8 +111,8 @@ export function checkoutCart(props) {
         })
       )
       .then(
-        setTimeout(function () {
-          window.location.href = "/confirmation";
+        setTimeout(function() {
+          window.location.href = "/confirmation"; //loads confirmation page
         }, 500)
       );
   };
