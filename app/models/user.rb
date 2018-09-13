@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   before_create :create_token
 
+  # Generate a secure session token
   def create_token
     self.token = SecureRandom.uuid + 'am111' + self.email[0,4]
   end
