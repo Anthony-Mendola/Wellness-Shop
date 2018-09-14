@@ -19,3 +19,5 @@ const ItemsList = ({ items, page }) => {
 };
 
 export default ItemsList;
+
+//Keys help React identify which items have changed/added/removed and give the elements a stable identity. 

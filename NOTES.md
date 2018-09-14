@@ -10,24 +10,40 @@ _
 ## Requirement Checklist
 
 The code is written in ES6 as much as possible _
-[ ] True
+- [ ] True
 create-react-app was used to create your React app _
-[ ] True
+- [ ] True
 There are 2 container components _
-[ ] True
+- [ ] True
 There are 5 stateless components _
-[ ] True
+- [ ] True
 There are 3 routes _
-[ ] True
+- [ ] True
 react-router is being used with proper RESTful routing _
-[ ] True
+- [ ] True
 Redux and redux-thunk middleware are being used to modify state change and make use of async actions to send data and receive data from the server _
-[ ] True
+- [ ] True
 Use of Rails API backend to persist data for the application _
-[ ] True
+- [ ] True
 Good understanding of the react/redux state flow _
-[ ] True
+- [ ] True
 Good understanding of state and props in React _
-[ ] True
+- [ ] True
 Knowledge of async JS with Promises \*
-[ ] True
+- [ ] True
+
+## Requirements from Project README ##
+* The code should be written in ES6 as much as possible
+* Use the create-react-app generator to start your project.
+* Your app should have one HTML page to render your react-redux application
+* There should be 2 container components
+    * *ItemsPage.js & Cart.js*
+* There should be 5 stateless components
+    * *AboutPage.js, AccountPage.js, ItemsList.js, ItemSpec.js, OrderConfirmation.js, Signup.js, UnitedStates.js*
+* There should be 3 routes
+* The Application must make use of react-router and proper RESTful routing
+* Use Redux middleware to respond to and modify state change
+* Make use of async actions to send data to and receive data from a server
+* Your Rails API should handle the data persistence. You should be using fetch() within your actions to GET and POST data from your API - do not use jQuery methods.
+* Your client-side application should handle the display of data with minimal data manipulation
+* Your application should have some minimal styling: 

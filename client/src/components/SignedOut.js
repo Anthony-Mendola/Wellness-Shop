@@ -38,6 +38,17 @@ class SignedOut extends Component {
             >
               Log In{" "}
             </Menu.Item>
+
+            <Menu.Item
+              as={Link}
+              to="/signup"
+              name="sign-up"
+              className="ui green basic button"
+              active={activeItem === "sign-up"}
+              onClick={this.handleMenuClick}
+            >
+              Sign Up{" "}
+            </Menu.Item>
           </Menu.Menu>
         </Menu>
       </Sticky>
