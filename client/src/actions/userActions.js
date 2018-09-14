@@ -112,7 +112,7 @@ export function checkoutCart(props) {
       )
       .then(
         setTimeout(function() {
-          window.location.href = "/confirmation"; //loads confirmation page
+          window.location.href = "/confirmation"; //loads confirmation page after checkout
         }, 500)
       );
   };

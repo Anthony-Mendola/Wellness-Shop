@@ -3,7 +3,7 @@ import * as actions from "../actions/itemActions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import ItemsList from "../components/ItemsList";
-import { Header, Divider } from "semantic-ui-react";
+import { Header } from "semantic-ui-react";
 
 class ItemsPage extends Component {
   componentDidMount() {
@@ -16,14 +16,13 @@ class ItemsPage extends Component {
         <div className="ui raise very padded fluid container segment">
           <Header as="h1" color="green" textAlign="center">
             Welcome to Anthony's Wellness Shop!
-        </Header>
+          </Header>
         </div>
         <Header as="h1" color="teal" textAlign="center">
           Items in stock
         </Header>
         <ItemsList page={"index"} items={this.props.items} />
       </div>
-
     );
   }
 }

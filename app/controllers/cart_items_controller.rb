@@ -6,6 +6,7 @@ class CartItemsController < ApplicationController
     render json: @cart
   end
 
+  #DeleteFromCart
   def destroy
     @item = CartItem.find_by(cart_item_params)
     @item.destroy
