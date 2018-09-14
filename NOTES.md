@@ -1,35 +1,28 @@
 # Notes
 
-The client connected with the API during the fetch request. Thanks to the configuration established by create-react-app, the Webpack dev server will infer what traffic to proxy.To have the Webpack development server proxy all requests starting with /api to our API server, we add the url to client/package.json.
-
-_ItemsPage
-_
-
-\*Cart
-
 ## Requirement Checklist
 
-The code is written in ES6 as much as possible _
+The code is written in ES6 as much as possible 
 - [ ] True
-create-react-app was used to create your React app _
+create-react-app was used to create your React app 
 - [ ] True
-There are 2 container components _
+There are 2 container components 
 - [ ] True
-There are 5 stateless components _
+There are 5 stateless components 
 - [ ] True
-There are 3 routes _
+There are 3 routes 
 - [ ] True
-react-router is being used with proper RESTful routing _
+react-router is being used with proper RESTful routing 
 - [ ] True
-Redux and redux-thunk middleware are being used to modify state change and make use of async actions to send data and receive data from the server _
+Redux and redux-thunk middleware are being used to modify state change and make use of async actions to send data and receive data from the server 
 - [ ] True
-Use of Rails API backend to persist data for the application _
+Use of Rails API backend to persist data for the application 
 - [ ] True
-Good understanding of the react/redux state flow _
+Good understanding of the react/redux state flow 
 - [ ] True
-Good understanding of state and props in React _
+Good understanding of state and props in React 
 - [ ] True
-Knowledge of async JS with Promises \*
+Knowledge of async JS with Promises 
 - [ ] True
 
 ## Requirements from Project README ##
@@ -41,9 +34,22 @@ Knowledge of async JS with Promises \*
 * There should be 5 stateless components
     * *AboutPage.js, AccountPage.js, ItemsList.js, ItemSpec.js, OrderConfirmation.js, Signup.js, UnitedStates.js*
 * There should be 3 routes
+    * */items, /items/:itemId, /confirmation, /account, /about, /login, /signup, /cart*
 * The Application must make use of react-router and proper RESTful routing
+    * *Paths are created via react-router that follow the REST convention of matching URL requests with their relevant component*
 * Use Redux middleware to respond to and modify state change
+    * *Redux provides a 3rd party extension point between dispatching an action and the moment it reaches the reducer.*
 * Make use of async actions to send data to and receive data from a server
 * Your Rails API should handle the data persistence. You should be using fetch() within your actions to GET and POST data from your API - do not use jQuery methods.
 * Your client-side application should handle the display of data with minimal data manipulation
-* Your application should have some minimal styling: 
+* Your application should have some minimal styling
+    * Semantic UI
+
+
+
+### Hierarchy ###
+
+*ItemsPage
+
+
+*Cart

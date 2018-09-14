@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, Embed } from 'semantic-ui-react'
+import { Embed } from 'semantic-ui-react'
 
 
 const AboutPage = props => (

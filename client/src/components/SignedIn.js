@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Menu, Segment, Icon, Button } from "semantic-ui-react";
+import { Menu, Segment, Icon } from "semantic-ui-react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actions from "../actions/userActions";
