@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import * as actions from "../actions/itemActions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import ItemsList from "../components/ItemsList";
+import ItemsList from "../components/items/ItemsList";
 import { Header } from "semantic-ui-react";
 
 class ItemsPage extends Component {

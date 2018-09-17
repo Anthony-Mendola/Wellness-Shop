@@ -3,17 +3,17 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actions from "./actions/itemActions";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Signup from "./components/Signup";
-import AccountPage from "./components/AccountPage";
+import Signup from "./components/user/Signup";
+import AccountPage from "./components/user/AccountPage";
 import Cart from "./containers/Cart";
-import Login from "./components/Login";
-import SignedIn from "./components/SignedIn";
-import SignedOut from "./components/SignedOut";
+import Login from "./components/user/Login";
+import SignedIn from "./components/navbar/SignedIn";
+import SignedOut from "./components/navbar/SignedOut";
 import ItemsPage from "./containers/ItemsPage";
-import ItemShow from "./components/ItemShow";
+import ItemShow from "./components/items/ItemShow";
 import { Divider } from "semantic-ui-react";
 import "./App.css";
-import OrderConfirmation from "./components/OrderConfirmation";
+import OrderConfirmation from "./components/cart/OrderConfirmation";
 import AboutPage from "./components/AboutPage";
 
 class App extends Component {

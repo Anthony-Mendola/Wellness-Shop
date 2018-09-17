@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actions from "../actions/itemActions";
 import { Header, Container, Divider } from "semantic-ui-react";
-import ItemsList from "../components/ItemsList";
-import CheckoutCart from "../components/CheckoutCart";
+import ItemsList from "../components/items/ItemsList";
+import CheckoutCart from "../components/cart/CheckoutCart";
 
 class Cart extends Component {
   render() {

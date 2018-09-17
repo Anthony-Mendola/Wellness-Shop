@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as actions from "../actions/userActions";
+import * as actions from "../../actions/userActions";
 import { Header, Container, Form, Button, Divider } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 

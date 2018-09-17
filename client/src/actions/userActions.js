@@ -5,7 +5,7 @@ export function createUser() {
       method: "POST",
       body: new FormData(document.getElementById("user-form")),
       credentials: "same-origin"
-    }).then(resp => loginOptions(resp, dispatch));
+    }).then(resp => authenticate(resp, dispatch));
   };
 }
 
@@ -16,7 +16,7 @@ export function updateUser(props) {
       method: "POST",
       body: new FormData(document.getElementById("user-form")),
       credentials: "same-origin"
-    }).then(resp => loginOptions(resp, dispatch));
+    }).then(resp => authenticate(resp, dispatch));
   };
 }
 
@@ -27,11 +27,11 @@ export function loginUser() {
       method: "POST",
       body: new FormData(document.getElementById("login-form")),
       credentials: "same-origin"
-    }).then(resp => loginOptions(resp, dispatch));
+    }).then(resp => authenticate(resp, dispatch));
   };
 }
 
-function loginOptions(resp, dispatch) {
+function authenticate(resp, dispatch) {
   if (resp.status === 201) {
     resp
       .json()
@@ -43,7 +43,7 @@ function loginOptions(resp, dispatch) {
       )
       .then((window.location = "/"));
   } else {
-    console.log("error");
+    alert("Invalid username or password");
   }
 }
 

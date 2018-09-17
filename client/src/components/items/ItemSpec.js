@@ -1,5 +1,5 @@
 import React from "react";
-import DeleteFromCart from "../components/DeleteFromCart";
+import DeleteFromCart from "../cart/DeleteFromCart";
 
 const ItemSpec = ({ id, name, thumbnail, price, page }) => {
   return (

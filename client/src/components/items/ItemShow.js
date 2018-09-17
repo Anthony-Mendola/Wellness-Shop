@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as actions from "../actions/itemActions";
-import AddToCart from "../components/AddToCart";
+import * as actions from "../../actions/itemActions";
+import AddToCart from "../cart/AddToCart";
 
 class ItemShow extends Component {
   componentDidMount() {

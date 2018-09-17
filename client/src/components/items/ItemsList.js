@@ -1,5 +1,5 @@
 import React from "react";
-import ItemSpec from "../components/ItemSpec";
+import ItemSpec from "../items/ItemSpec";
 
 const ItemsList = ({ items, page }) => {
   return (

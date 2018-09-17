@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Menu, Segment, Icon } from "semantic-ui-react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as actions from "../actions/userActions";
+import * as actions from "../../actions/userActions";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
