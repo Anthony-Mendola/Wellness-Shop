@@ -17,6 +17,7 @@ class Login extends Component {
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
+
     });
   };
 
@@ -39,7 +40,7 @@ class Login extends Component {
               <input
                 name="email"
                 type="text"
-                placeholder="user@WellnessShop.com"
+                placeholder="user@wellness.com"
                 value={this.state.email}
                 onChange={this.handleChange}
               />

@@ -111,9 +111,11 @@ export function checkoutCart(props) {
         })
       )
       .then(
-        setTimeout(function() {
+        setTimeout(function () {
           window.location.href = "/confirmation"; //loads confirmation page after checkout
         }, 500)
       );
   };
 }
+
+//To send credentials if the request URL is on the same origin as the calling script, add credentials: 'same-origin'
