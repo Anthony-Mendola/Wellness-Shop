@@ -26,7 +26,7 @@ export function fetchItem(props) {
   };
 }
 
-//Cleans up fetch code
+//called in ItemShow
 export function cleanupItem() {
   return dispatch => {
     const item = {};

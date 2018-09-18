@@ -32,6 +32,7 @@ class ItemShow extends Component {
     );
   }
 
+  //removes component from DOM
   componentWillUnmount() {
     this.props.actions.cleanupItem();
   }
@@ -39,6 +40,7 @@ class ItemShow extends Component {
 
 //hasOwnProperty: if user has cart
 //ownProps: react-redux passes the prop passed to this component into my connect func
+//the state being mapped to props is the redux state
 function mapStateToProps(state, ownProps) {
   if (state.user.hasOwnProperty("cart")) {
     return {
@@ -54,10 +56,12 @@ function mapStateToProps(state, ownProps) {
   }
 }
 
+//changes will be reflected when new actions are dispatched
 function mapDispatchToProps(dispatch) {
   return { actions: bindActionCreators(actions, dispatch) };
 }
 
+// function that wraps the ItemShow component with store connection
 export default connect(
   mapStateToProps,
   mapDispatchToProps

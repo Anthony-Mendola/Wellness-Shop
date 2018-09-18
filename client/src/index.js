@@ -16,6 +16,9 @@ const persistConfig = {
   storage: storage,
   stateReconciler: autoMergeLevel2
 };
+//state reconciler merges the incoming state with the initital state
+//Automerge skips modifications of state done by the reducer during the rehyrdate action and does a level 2 shallow merge.
+//Incoming state and initial state are merged rather than overwritten.
 
 const pReducer = persistReducer(persistConfig, rootReducer);
 

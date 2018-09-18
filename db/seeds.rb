@@ -172,4 +172,3 @@ Item.create([
   
 ])
 
-user.cart.items << [Item.find(1), Item.find(4)]

@@ -1,6 +1,8 @@
+
+//this action will be called from a button in NewAccount
 export function createUser() {
   return dispatch => {
-    dispatch({ type: "SIGNING_UP" });
+    dispatch({ type: "SIGN_UP" });
     let userForm = new FormData(document.getElementById("user-form"));
     return fetch("/api/users", {
       method: "POST",
@@ -12,7 +14,7 @@ export function createUser() {
 
 export function updateUser(props) {
   return dispatch => {
-    dispatch({ type: "UPDATING_USER" });
+    dispatch({ type: "UPDATE_USER" });
     let userForm = new FormData(document.getElementById("user-form"));
     return fetch(`/api/users/${props.user.id}`, {
       method: "POST",
@@ -24,7 +26,7 @@ export function updateUser(props) {
 
 export function loginUser() {
   return dispatch => {
-    dispatch({ type: "LOGGING_IN" });
+    dispatch({ type: "LOG_IN" });
     let loginForm = new FormData(document.getElementById("login-form"));
     return fetch("/api/sessions", {
       method: "POST",
