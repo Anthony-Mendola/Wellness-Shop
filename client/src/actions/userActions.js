@@ -1,9 +1,10 @@
 export function createUser() {
   return dispatch => {
     dispatch({ type: "SIGNING_UP" });
+    let userForm = new FormData(document.getElementById("user-form"));
     return fetch("/api/users", {
       method: "POST",
-      body: new FormData(document.getElementById("user-form")),
+      body: userForm,
       credentials: "same-origin"
     }).then(resp => authenticate(resp, dispatch));
   };
@@ -12,9 +13,10 @@ export function createUser() {
 export function updateUser(props) {
   return dispatch => {
     dispatch({ type: "UPDATING_USER" });
+    let userForm = new FormData(document.getElementById("user-form"));
     return fetch(`/api/users/${props.user.id}`, {
       method: "POST",
-      body: new FormData(document.getElementById("user-form")),
+      body: userForm,
       credentials: "same-origin"
     }).then(resp => authenticate(resp, dispatch));
   };
@@ -23,9 +25,10 @@ export function updateUser(props) {
 export function loginUser() {
   return dispatch => {
     dispatch({ type: "LOGGING_IN" });
+    let loginForm = new FormData(document.getElementById("login-form"));
     return fetch("/api/sessions", {
       method: "POST",
-      body: new FormData(document.getElementById("login-form")),
+      body: loginForm,
       credentials: "same-origin"
     }).then(resp => authenticate(resp, dispatch));
   };
@@ -60,9 +63,10 @@ export function logoutUser() {
 export function addToCart() {
   return dispatch => {
     dispatch({ type: "ADDING_ITEM" });
+    let cartAddForm = new FormData(document.getElementById("add-to-cart"));
     return fetch("/api/cart_items", {
       method: "POST",
-      body: new FormData(document.getElementById("add-to-cart")),
+      body: cartAddForm,
       credentials: "same-origin"
     })
       .then(resp => resp.json())
@@ -78,11 +82,12 @@ export function addToCart() {
 export function deleteFromCart(props) {
   return dispatch => {
     dispatch({ type: "DELETE_ITEM" });
+    let cartDeleteForm = new FormData(
+      document.getElementById(`delete-from-cart-${props.itemID}`)
+    );
     return fetch(`/api/cart_items/${props.cartId}/${props.itemId}`, {
       method: "POST",
-      body: new FormData(
-        document.getElementById(`delete-from-cart-${props.itemID}`)
-      ),
+      body: cartDeleteForm,
       credentials: "same-origin"
     })
       .then(resp => resp.json())
@@ -97,10 +102,11 @@ export function deleteFromCart(props) {
 
 export function checkoutCart(props) {
   return dispatch => {
-    dispatch({ type: "CHECKING_OUT" });
+    dispatch({ type: "CHECK_OUT" });
+    let checkoutForm = new FormData(document.getElementById("checkout-cart"));
     return fetch(`/api/carts/${props.cartId}`, {
       method: "POST",
-      body: new FormData(document.getElementById("checkout-cart")),
+      body: checkoutForm,
       credentials: "same-origin"
     })
       .then(resp => resp.json())
