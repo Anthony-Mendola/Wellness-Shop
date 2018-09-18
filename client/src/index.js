@@ -16,15 +16,18 @@ const persistConfig = {
   storage: storage,
   stateReconciler: autoMergeLevel2
 };
-//state reconciler merges the incoming state with the initital state
-//Automerge skips modifications of state done by the reducer during the rehyrdate action and does a level 2 shallow merge.
+//storage defaults to localStorage
+//autoMergeLevel2 will make a copy of the initial states then override only the keys within the object that were persisted.
 //Incoming state and initial state are merged rather than overwritten.
 
-const pReducer = persistReducer(persistConfig, rootReducer);
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const store = createStore(pReducer, compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
+const store = createStore(persistedReducer, compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
 
 export const persistor = persistStore(store);
+
+//persistStore sets up a listener that will continuously save newly changed state to storage.
+//persistReducer is notified of the changes in the store and asynchronously persists it.
 
 ReactDOM.render(
   <Provider store={store}>
