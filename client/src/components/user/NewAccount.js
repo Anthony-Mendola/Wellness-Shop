@@ -35,6 +35,7 @@ class NewAccount extends Component {
     }
   }
 
+  //since the id values are the same here as the keys in state, we can write an abstract setState.
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value

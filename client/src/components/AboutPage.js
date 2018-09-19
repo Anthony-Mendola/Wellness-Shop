@@ -2,7 +2,7 @@ import React from "react";
 import { Embed } from 'semantic-ui-react'
 
 
-const AboutPage = props => (
+const AboutPage = () => (
 
   <div className="ui container">
     <h2>About</h2>

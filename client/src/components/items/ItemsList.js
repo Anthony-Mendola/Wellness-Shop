@@ -1,6 +1,7 @@
 import React from "react";
 import ItemSpec from "../items/ItemSpec";
 
+//object destructuring to extract values from props
 const ItemsList = ({ items, page }) => {
   return (
     <div className="page-container">

@@ -16,3 +16,7 @@ export default function authReducer(state = [], action) {
       return state;
   }
 }
+
+
+//...state merges existing state
+//return state to pass the state back if we do not match an action

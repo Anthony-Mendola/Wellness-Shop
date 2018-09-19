@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actions from "../../actions/itemActions";
 import AddToCart from "../cart/AddToCart";
+import { Link } from "react-router-dom";
 
 class ItemShow extends Component {
   componentDidMount() {
@@ -14,9 +15,9 @@ class ItemShow extends Component {
 
     return (
       <div className="item-div">
-        <a className="ui teal button" href="/items">
+        <Link className="ui teal button" to="/items">
           Back
-        </a>
+        </Link>
         <div className="ui raise very padded container segment">
           <h2>{item.name}</h2>
           <img src={item.img_full} alt={item.name} />
@@ -28,7 +29,7 @@ class ItemShow extends Component {
           )}
           <p dangerouslySetInnerHTML={{ __html: item.description }} />
         </div>
-      </div>
+      </div >
     );
   }
 
@@ -39,7 +40,7 @@ class ItemShow extends Component {
 }
 
 //hasOwnProperty: if user has cart
-//ownProps: react-redux passes the prop passed to this component into my connect func
+//ownProps: react-redux passes the prop passed to this component into connect func
 //the state being mapped to props is the redux state
 function mapStateToProps(state, ownProps) {
   if (state.user.hasOwnProperty("cart")) {
