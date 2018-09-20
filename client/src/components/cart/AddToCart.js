@@ -16,7 +16,9 @@ class AddToCart extends Component {
   //When the add to cart button is clicked, the button becomes disabled
   handleSubmit = e => {
     e.preventDefault();
+    console.log('A')
     this.props.actions.addToCart();
+    console.log('B')
     this.setState({ buttonDisabled: true });
   };
 
