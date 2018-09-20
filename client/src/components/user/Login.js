@@ -6,13 +6,11 @@ import { Header, Container, Form, Button, Divider } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 class Login extends Component {
-  constructor() {
-    super();
-    this.state = {
-      email: "",
-      password: ""
-    };
-  }
+  state = {
+    email: "",
+    password: ""
+  };
+
 
   handleChange = e => {
     this.setState({

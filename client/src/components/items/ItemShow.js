@@ -57,12 +57,11 @@ function mapStateToProps(state, ownProps) {
   }
 }
 
-//changes will be reflected when new actions are dispatched
+
 function mapDispatchToProps(dispatch) {
   return { actions: bindActionCreators(actions, dispatch) };
 }
 
-// function that wraps the ItemShow component with store connection
 export default connect(
   mapStateToProps,
   mapDispatchToProps
