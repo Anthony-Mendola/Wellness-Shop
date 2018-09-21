@@ -2,11 +2,18 @@ import React, { Component } from "react";
 import { Button, Icon, Label } from "semantic-ui-react"
 
 class LikeButton extends Component {
-  state = {
-    count: 0
+  constructor() {
+    super()
+    this.state = {
+      count: 0
+    }
+
   }
 
-  handleLike = () => {
+
+  handleLike = (e) => {
+    e.preventDefault();
+
     this.setState({
       count: this.state.count + 1
     })
@@ -31,6 +38,4 @@ class LikeButton extends Component {
 
 
 
-
-
-export default LikeButton
+export default LikeButton;

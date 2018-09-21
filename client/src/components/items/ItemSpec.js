@@ -3,7 +3,7 @@ import DeleteFromCart from "../cart/DeleteFromCart";
 import LikeButton from "../items/LikeButton"
 import { Link } from "react-router-dom";
 
-const ItemSpec = ({ id, name, thumbnail, price, page }) => {
+const ItemSpec = ({ id, name, thumbnail, price, likes, page }) => {
   return (
     <div className="item-div">
       <Link className="item-link" to={`/items/${id}`}>
@@ -12,6 +12,7 @@ const ItemSpec = ({ id, name, thumbnail, price, page }) => {
       <div>
         <h4>{name}</h4>
         <em>${price}</em>
+        <em>{likes}</em>
         <LikeButton />
       </div>
 

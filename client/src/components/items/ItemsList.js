@@ -1,6 +1,6 @@
 import React from "react";
 import ItemSpec from "../items/ItemSpec";
-import LikeButton from "../items/LikeButton"
+
 
 //object destructuring to extract values from props
 const ItemsList = ({ items, page }) => {
@@ -13,6 +13,7 @@ const ItemsList = ({ items, page }) => {
           name={item.name}
           thumbnail={item.img_thumbnail}
           price={item.price}
+          likes={item.likes}
           page={page}
         />
       ))}
