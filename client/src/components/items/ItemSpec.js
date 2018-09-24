@@ -1,3 +1,4 @@
+
 import React from "react";
 import DeleteFromCart from "../cart/DeleteFromCart";
 import LikeButton from "../items/LikeButton"
@@ -12,8 +13,8 @@ const ItemSpec = ({ id, name, thumbnail, price, likes, page }) => {
       <div>
         <h4>{name}</h4>
         <em>${price}</em>
-        <em>{likes}</em>
-        <LikeButton />
+
+        <LikeButton likes={likes} />
       </div>
 
       {page === "cart" && <DeleteFromCart itemId={id} />}

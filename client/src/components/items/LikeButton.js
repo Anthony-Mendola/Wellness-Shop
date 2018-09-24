@@ -2,33 +2,45 @@ import React, { Component } from "react";
 import { Button, Icon, Label } from "semantic-ui-react"
 
 class LikeButton extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-      count: 0
+      likes: this.props.likes
     }
 
   }
 
-
   handleLike = (e) => {
     e.preventDefault();
-
     this.setState({
-      count: this.state.count + 1
+      likes: this.state.likes + 1
     })
+  }
+
+  componentDidUpdate() {
+    updateLikes(this.state.id, this.state.likes)
+
+    function updateLikes(itemId, likes) {
+      fetch(`/api/items/${itemId}`, {
+        method: "PUT",
+        body: JSON.stringify({ likes: likes }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+    }
   }
 
   render() {
     return (
       <div>
-        <Button as='div' labelPosition='right'>
-          <Button icon onClick={this.handleLike}>
+        <Button onClick={this.handleLike} as='div' labelPosition='right'>
+          <Button icon >
             <Icon name="heart" />
             Like
       </Button>
           <Label as="a" basic pointing="left">
-            {this.state.count}
+            {this.state.likes}
           </Label>
         </Button>
       </div >

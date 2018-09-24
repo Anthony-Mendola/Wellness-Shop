@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     post 'cart_items' => 'cart_items#create'
     post 'cart_items/:cart_id/:item_id' => 'cart_items#destroy'
     post 'carts/:id' => 'carts#update'
+    post 'items/:id' => 'items#update'
   end
 
 

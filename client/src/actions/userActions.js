@@ -63,7 +63,7 @@ export function logoutUser() {
 }
 
 export function addToCart() {
-  console.log("C")
+
   return dispatch => {
     dispatch({ type: "ADDING_ITEM" });
     let cartAddForm = new FormData(document.getElementById("add-to-cart"));
@@ -74,7 +74,7 @@ export function addToCart() {
     })
       .then(resp => resp.json())
       .then(cart => {
-        console.log("D")
+
         dispatch({
           type: "UPDATE_CART",
           payload: cart
@@ -82,7 +82,7 @@ export function addToCart() {
       }
       );
   };
-  console.log("E")
+
 }
 
 export function deleteFromCart(props) {

@@ -11,5 +11,19 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     render json: @item
   end
+
+  def update 
+    @item = Item.find(params[:id])
+    if @item.update(parseInt(:likes))
+      @item.save
+      render json: @item
+  end
 end
 
+
+
+
+end
+
+#strong params sanitize likes atrribute only @item.update
+#render json: @item

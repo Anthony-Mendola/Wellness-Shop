@@ -18,7 +18,6 @@ class ItemsPage extends Component {
             Welcome to Anthony's Wellness Shop!
           </Header>
         </div>
-        <button onClick={this.handleLiker}></button>
         <Header as="h1" color="teal" textAlign="center">
           Items in stock
         </Header>
