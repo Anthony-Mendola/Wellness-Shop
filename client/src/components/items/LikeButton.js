@@ -16,17 +16,17 @@ class LikeButton extends Component {
   }
 
   updateLikes = (likes) => {
-    return dispatch => {
-      dispatch({ type: "UPDATE_LIKES" });
-      return fetch(`/api/items/${this.props.id}`, {
-        method: "PUT",
-        body: JSON.stringify({ likes: likes }),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }).then(resp, dispatch)
-    }
+    fetch(`/api/items/${this.props.id}`, {
+      method: "PUT",
+      body: JSON.stringify({ likes: likes }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(resp => resp.json())
+      .then(newLikes => this.setState({ likes: newLikes.likes }));
   }
+
 
 
   render() {

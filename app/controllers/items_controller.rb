@@ -26,5 +26,3 @@ end
 
 end
 
-#strong params sanitize likes atrribute only @item.update
-#render json: @item
