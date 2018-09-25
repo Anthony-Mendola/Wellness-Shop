@@ -14,7 +14,7 @@ const ItemSpec = ({ id, name, thumbnail, price, likes, page }) => {
         <h4>{name}</h4>
         <em>${price}</em>
 
-        <LikeButton likes={likes} />
+        <LikeButton id={id} likes={likes} />
       </div>
 
       {page === "cart" && <DeleteFromCart itemId={id} />}

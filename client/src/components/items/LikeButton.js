@@ -12,24 +12,22 @@ class LikeButton extends Component {
 
   handleLike = (e) => {
     e.preventDefault();
-    this.setState({
-      likes: this.state.likes + 1
-    })
+    this.updateLikes(this.state.likes + 1);
   }
 
-  componentDidUpdate() {
-    updateLikes(this.state.id, this.state.likes)
-
-    function updateLikes(itemId, likes) {
-      fetch(`/api/items/${itemId}`, {
+  updateLikes = (likes) => {
+    return dispatch => {
+      dispatch({ type: "UPDATE_LIKES" });
+      return fetch(`/api/items/${this.props.id}`, {
         method: "PUT",
         body: JSON.stringify({ likes: likes }),
         headers: {
           'Content-Type': 'application/json'
         }
-      })
+      }).then(resp, dispatch)
     }
   }
+
 
   render() {
     return (

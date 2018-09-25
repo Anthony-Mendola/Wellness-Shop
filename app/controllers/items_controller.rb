@@ -14,14 +14,15 @@ class ItemsController < ApplicationController
 
   def update 
     @item = Item.find(params[:id])
-    if @item.update(parseInt(:likes))
+    if @item.update(like_params)
       @item.save
       render json: @item
   end
 end
 
-
-
+def like_params
+  params.require(:item).permit(:likes)
+end
 
 end
 

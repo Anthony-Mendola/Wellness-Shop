@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Header, Container, Button, Divider } from "semantic-ui-react";
 import NewAccount from "./NewAccount";
