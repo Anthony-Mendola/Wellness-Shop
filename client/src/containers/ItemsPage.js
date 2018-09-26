@@ -18,7 +18,6 @@ class ItemsPage extends Component {
         likes: 'asc'
       }
     }
-    this.sortBy = this.sortBy.bind(this)
   }
 
 
