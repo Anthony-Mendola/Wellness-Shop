@@ -39,7 +39,6 @@ class ItemsPage extends Component {
 
 
   render() {
-    const { active } = this.state
     return (
       <div>
         <div className="ui raise very padded fluid container segment">
