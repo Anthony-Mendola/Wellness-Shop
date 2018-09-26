@@ -15,7 +15,7 @@ class ItemsPage extends Component {
     super()
     this.state = {
       direction: {
-        price: 'asc'
+        likes: 'asc'
       }
     }
     this.sortBy = this.sortBy.bind(this)
