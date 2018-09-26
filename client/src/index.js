@@ -14,7 +14,8 @@ import { Provider } from "react-redux";
 const persistConfig = {
   key: "root",
   storage: storage,
-  stateReconciler: autoMergeLevel2
+  stateReconciler: autoMergeLevel2,
+  blacklist: ['currentItem', 'items']
 };
 //storage defaults to localStorage
 //autoMergeLevel2 will make a copy of the initial states then override only the keys within the object that were persisted.

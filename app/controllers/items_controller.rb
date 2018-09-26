@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
   def update 
     @item = Item.find(params[:id])
     @item.update(like_params)
-      @item.save
+     # @item.save
       render json: @item
   end
 

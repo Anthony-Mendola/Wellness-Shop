@@ -7,13 +7,10 @@ class LikeButton extends Component {
     this.state = {
       likes: this.props.likes
     }
-    // this.handleLike = this.handleLike.bind(this)
   }
 
   // componentWillUpdate(nextProps, nextState) {
-
   //   debugger
-
   // }
 
   handleLike = (e) => {
