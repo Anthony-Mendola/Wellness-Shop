@@ -3,7 +3,7 @@ import * as actions from "../actions/itemActions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import ItemsList from "../components/items/ItemsList";
-import { Header } from "semantic-ui-react";
+import { Header, Button } from "semantic-ui-react";
 
 
 class ItemsPage extends Component {
@@ -39,6 +39,7 @@ class ItemsPage extends Component {
 
 
   render() {
+    const { active } = this.state
     return (
       <div>
         <div className="ui raise very padded fluid container segment">
@@ -46,7 +47,7 @@ class ItemsPage extends Component {
             Welcome to Anthony's Wellness Shop!
           </Header>
         </div>
-        <button onClick={() => this.sortBy('likes')}>Sort By Likes</button>
+        <Button positive onClick={() => this.sortBy('likes')}>Sort By Likes</Button>
         <Header as="h1" color="teal" textAlign="center">
           Items in stock
         </Header>
