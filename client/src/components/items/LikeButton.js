@@ -7,13 +7,21 @@ class LikeButton extends Component {
     this.state = {
       likes: this.props.likes
     }
-
+    // this.handleLike = this.handleLike.bind(this)
   }
+
+  // componentWillUpdate(nextProps, nextState) {
+
+  //   debugger
+
+  // }
 
   handleLike = (e) => {
     e.preventDefault();
     this.updateLikes(this.state.likes + 1);
+    //console.log(this.state.likes + 1)
   }
+
 
   updateLikes = (likes) => {
     fetch(`/api/items/${this.props.id}`, {
@@ -24,6 +32,7 @@ class LikeButton extends Component {
       }
     })
       .then(resp => resp.json())
+      //.then(newLikes => console.log(newLikes.likes))
       .then(newLikes => this.setState({ likes: newLikes.likes }));
   }
 
