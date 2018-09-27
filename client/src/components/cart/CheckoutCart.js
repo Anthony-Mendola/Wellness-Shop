@@ -15,7 +15,11 @@ class CheckoutCart extends Component {
     return (
       <div>
         <Form id="checkout-cart" onSubmit={this.handleSubmit}>
-          <input name="cart_id" type="hidden" value={this.props.cartId} />
+          <input
+            name="cart_id"
+            type="hidden"
+            value={this.props.cartId}
+          />
           <Button as={Link} to="/confirmation" type="submit" fluid inverted disabled={this.props.disabled}>
             Confirm Order
           </Button>
