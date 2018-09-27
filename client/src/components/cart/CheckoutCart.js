@@ -20,7 +20,7 @@ class CheckoutCart extends Component {
           </Button>
         </Form>
         <br />
-        {this.props.itemtIds}
+        {this.props.itemIds}
       </div>
     );
   }

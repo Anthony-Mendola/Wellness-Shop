@@ -27,7 +27,7 @@ class App extends Component {
           <Route exact path="/" component={ItemsPage} />
           <Route exact path="/items" component={ItemsPage} />
           <Route path={"/items/:itemId"} component={ItemShow} />
-          <Route exact path={"/confirmation"} component={OrderConfirmation} />
+          <Route path={"/confirmation"} component={OrderConfirmation} />
           {this.props.token && <Route exact path="/account" component={AccountPage} />}
           {this.props.token && <Route exact path="/about" component={AboutPage} />}
           {!this.props.token && <Route exact path="/login" component={Login} />}

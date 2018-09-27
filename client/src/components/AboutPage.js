@@ -8,12 +8,12 @@ const AboutPage = () => (
     <h2>About</h2>
     <div className="ui raise padded container segment">
       <h4>Wellness Shop is a full stack application  for selling health products. The application utilizes React  & Redux for frontend with a Rails API for backend. The app is styled using Semantic UI with custom CSS.</h4>
-      <h3>Features:</h3>
+      <h3>Features</h3>
       <ul>
         <li>Signup/Login with authentication</li>
         <li>Login token persists until logged out</li>
-        <li>Logged out view</li>
         <li>View & update account details</li>
+        <li>Logged out view</li>
         <li>Like items and sort by likes</li>
         <li>Add item to cart</li>
         <li>View cart items with total cost</li>
