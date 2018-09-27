@@ -20,7 +20,7 @@ class CheckoutCart extends Component {
             type="hidden"
             value={this.props.cartId}
           />
-          <Button as={Link} to="/confirmation" type="submit" fluid inverted disabled={this.props.disabled}>
+          <Button onClick={() => history.push('/')} type="submit" fluid inverted disabled={this.props.disabled}>
             Confirm Order
           </Button>
         </Form>
