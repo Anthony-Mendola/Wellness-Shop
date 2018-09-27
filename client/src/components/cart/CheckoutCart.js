@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actions from "../../actions/userActions";
 import { Form, Button } from "semantic-ui-react";
-import { Link } from "react-router-dom";
 
 class CheckoutCart extends Component {
   handleSubmit = e => {
@@ -20,7 +19,7 @@ class CheckoutCart extends Component {
             type="hidden"
             value={this.props.cartId}
           />
-          <Button onClick={() => history.push('/')} type="submit" fluid inverted disabled={this.props.disabled}>
+          <Button type="submit" fluid inverted disabled={this.props.disabled}>
             Confirm Order
           </Button>
         </Form>
