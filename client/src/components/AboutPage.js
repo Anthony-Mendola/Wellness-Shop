@@ -28,7 +28,7 @@ const AboutPage = () => (
         icon='right circle arrow'
         size="small"
         placeholder='https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
-        url='http://www.anthonymendola.com'
+        url='https://www.anthonymendola.com'
       />
     </div>
   </div>
